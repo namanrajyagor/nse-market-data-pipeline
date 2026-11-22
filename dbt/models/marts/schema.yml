@@ -1,0 +1,56 @@
+version: 2
+
+models:
+  - name: dim_stock
+    description: "One row per stock (plus the Nifty 50 index)"
+    columns:
+      - name: symbol
+        data_tests: [unique, not_null]
+      - name: sector
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['Automobile', 'Banking', 'Consumer & Services', 'Energy & Power', 'FMCG',
+                         'Financial Services', 'Healthcare', 'IT', 'Index',
+                         'Infrastructure & Materials', 'Metals & Mining', 'Telecom']
+
+  - name: fct_daily_prices
+    description: "One row per stock per trading day, with returns and risk metrics"
+    data_tests:
+      - unique:
+          column_name: "symbol || '|' || trade_date"     # one row per stock per day
+    columns:
+      - name: symbol
+        data_tests:
+          - not_null
+          - relationships:
+              arguments:
+                to: ref('dim_stock')
+                field: symbol
+      - name: trade_date
+        data_tests: [not_null]
+      - name: close_price
+        data_tests: [not_null]
+      - name: adj_close_price
+        data_tests: [not_null]
+
+  - name: mart_stock_performance
+    columns:
+      - name: symbol
+        data_tests: [unique, not_null]
+
+  - name: mart_sector_daily
+    data_tests:
+      - unique:
+          column_name: "sector || '|' || trade_date"     # one row per sector per day
+
+  - name: mart_trend_signals
+    columns:
+      - name: symbol
+        data_tests: [unique, not_null]
+      - name: trend_signal
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['Strong uptrend', 'Uptrend', 'Downtrend', 'Strong downtrend', 'Not enough history']

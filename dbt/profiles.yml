@@ -1,0 +1,15 @@
+# How dbt connects to PostgreSQL.
+# The password is NOT stored here: when DBT_PG_PASSWORD is not set, the password
+# is left empty and PostgreSQL reads it from ~/.pgpass (same as our loader).
+nse_market:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      port: 5432
+      user: postgres
+      password: "{{ env_var('DBT_PG_PASSWORD', '') }}"
+      dbname: nse_market
+      schema: analytics          # dbt builds all its tables and views here
+      threads: 2                 # matches the 2 CPU threads given to WSL

@@ -1,0 +1,29 @@
+# dbt project: NSE market data transformations
+name: nse_market
+version: "1.0.0"
+profile: nse_market            # which connection (in profiles.yml) to use
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+models:
+  nse_market:
+    staging:
+      +materialized: view      # light, always up to date
+    marts:
+      +materialized: table     # stored results, fast to query
+
+
+seeds:
+  nse_market:
+    price_adjustments:
+      +column_types:
+        adjust_before_date: date
+        factor: numeric(14,10)     # exact decimal, so prices stay NUMERIC
+    reviewed_extreme_moves:
+      +column_types:
+        trade_date: date
