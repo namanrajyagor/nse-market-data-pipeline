@@ -1,0 +1,22 @@
+# Python virtual environments (one per tool; rebuilt from requirements-*.txt)
+.venv/
+.venv-dbt/
+.venv-app/
+__pycache__/
+*.pyc
+
+# dbt build output and logs (regenerated on every run)
+dbt/target/
+dbt/logs/
+dbt/dbt_packages/
+dbt/.user.yml
+
+# Pipeline and Airflow logs from local runs
+logs/
+*.log
+
+# Editor settings
+.vscode/
+
+# Personal interview prep (not for GitHub)
+*Study_Guide*.pdf
