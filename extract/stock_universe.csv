@@ -1,0 +1,52 @@
+yf_symbol,company,sector,is_index
+^NSEI,Nifty 50 Index,Index,1
+HDFCBANK.NS,HDFC Bank,Banking,0
+ICICIBANK.NS,ICICI Bank,Banking,0
+SBIN.NS,State Bank of India,Banking,0
+KOTAKBANK.NS,Kotak Mahindra Bank,Banking,0
+AXISBANK.NS,Axis Bank,Banking,0
+BAJFINANCE.NS,Bajaj Finance,Financial Services,0
+BAJAJFINSV.NS,Bajaj Finserv,Financial Services,0
+SBILIFE.NS,SBI Life Insurance,Financial Services,0
+HDFCLIFE.NS,HDFC Life Insurance,Financial Services,0
+SHRIRAMFIN.NS,Shriram Finance,Financial Services,0
+JIOFIN.NS,Jio Financial Services,Financial Services,0
+TCS.NS,Tata Consultancy Services,IT,0
+INFY.NS,Infosys,IT,0
+HCLTECH.NS,HCL Technologies,IT,0
+TECHM.NS,Tech Mahindra,IT,0
+WIPRO.NS,Wipro,IT,0
+RELIANCE.NS,Reliance Industries,Energy & Power,0
+ONGC.NS,Oil and Natural Gas Corporation,Energy & Power,0
+COALINDIA.NS,Coal India,Energy & Power,0
+NTPC.NS,NTPC,Energy & Power,0
+POWERGRID.NS,Power Grid Corporation,Energy & Power,0
+ITC.NS,ITC,FMCG,0
+HINDUNILVR.NS,Hindustan Unilever,FMCG,0
+NESTLEIND.NS,Nestle India,FMCG,0
+TATACONSUM.NS,Tata Consumer Products,FMCG,0
+MARUTI.NS,Maruti Suzuki,Automobile,0
+M&M.NS,Mahindra & Mahindra,Automobile,0
+TMPV.NS,Tata Motors Passenger Vehicles,Automobile,0
+BAJAJ-AUTO.NS,Bajaj Auto,Automobile,0
+EICHERMOT.NS,Eicher Motors,Automobile,0
+SUNPHARMA.NS,Sun Pharmaceutical,Healthcare,0
+CIPLA.NS,Cipla,Healthcare,0
+DRREDDY.NS,Dr. Reddy's Laboratories,Healthcare,0
+APOLLOHOSP.NS,Apollo Hospitals,Healthcare,0
+MAXHEALTH.NS,Max Healthcare,Healthcare,0
+TATASTEEL.NS,Tata Steel,Metals & Mining,0
+JSWSTEEL.NS,JSW Steel,Metals & Mining,0
+HINDALCO.NS,Hindalco Industries,Metals & Mining,0
+ADANIENT.NS,Adani Enterprises,Metals & Mining,0
+LT.NS,Larsen & Toubro,Infrastructure & Materials,0
+ADANIPORTS.NS,Adani Ports and SEZ,Infrastructure & Materials,0
+BEL.NS,Bharat Electronics,Infrastructure & Materials,0
+ULTRACEMCO.NS,UltraTech Cement,Infrastructure & Materials,0
+GRASIM.NS,Grasim Industries,Infrastructure & Materials,0
+TITAN.NS,Titan Company,Consumer & Services,0
+ASIANPAINT.NS,Asian Paints,Consumer & Services,0
+TRENT.NS,Trent,Consumer & Services,0
+ETERNAL.NS,Eternal (Zomato),Consumer & Services,0
+INDIGO.NS,InterGlobe Aviation (IndiGo),Consumer & Services,0
+BHARTIARTL.NS,Bharti Airtel,Telecom,0
